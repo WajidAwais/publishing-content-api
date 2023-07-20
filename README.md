@@ -18,6 +18,8 @@ Navigate to the project's directory:
 cd blogs-server
 ```
 
+#### Prerequisite : Node.js v18.16
+
 Install dependencies using npm:
 
 ```
