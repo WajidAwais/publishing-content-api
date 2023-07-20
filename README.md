@@ -58,7 +58,7 @@ npm run dev
 
 Server will start at `http://localhost:8080` by default.
 
-### Running test cases
+## Running test cases
 
 Quit the server if it is running.
 Run following command in the terminal.
