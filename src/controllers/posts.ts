@@ -21,7 +21,6 @@ export const addPost = async (req: CustomRequest, res: Response) => {
 };
 
 export const getPosts = async (req: CustomRequest, res: Response) => {
-  const userId = req.userId as string;
   const title = req.query.title as string;
 
   const whereOptions: any = {};
