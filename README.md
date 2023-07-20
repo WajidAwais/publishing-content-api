@@ -27,8 +27,14 @@ npm install
 ### 3. Setup environment variables
 
 Rename `.env.example` file with `.env`.
-You can replace `DATABASE_URL` with your PostgreSQL database URL of local machine.
-Default server port is set to 8080. You can change it in env file by change `PORT` value.
+By default, Database URI is set to:
+
+```
+postgresql://root:root@localhost:5432/stratusgrid
+```
+
+Make sure to replace `root (username)` & `root (password)` in `DATABASE_URL` with your PostgreSQL username & password set on your local machine.
+Default server port is set to 8080. You can change it in env file by changing `PORT` value if 8080 is already in use for your machine.
 
 ### 4. Setup, migrate & seed database
 
