@@ -19,7 +19,7 @@ export const handleSignup = async (req: Request, res: Response) => {
     },
   });
   if (user) {
-    return sendResponse(res, null, 'User already exists');
+    return sendResponse(res, null, 'User already exists', RESPONSE_CODES.conflictError);
   }
   const encryptedPassword = encryptData(password);
 
@@ -50,5 +50,5 @@ export const handleLogin = async (req: Request, res: Response) => {
       return sendResponse(res, { authtoken: token });
     }
   }
-  return sendResponse(res, null, 'Invalid email/password', RESPONSE_CODES.serverError);
+  return sendResponse(res, null, 'Invalid email/password', RESPONSE_CODES.authorizationError);
 };

@@ -1,9 +1,9 @@
 import jwt from 'jsonwebtoken';
 import { Request, Response, NextFunction } from 'express';
 import { IncomingHttpHeaders } from 'http';
-import RESPONSE_CODES from '../constants/responseCodes';
 import sendResponse from '../helpers/responseHelper';
 import { CustomRequest } from '../interfaces/request';
+import RESPONSE_CODES from '../constants/responseCodes';
 
 const authenticateToken = (req: Request, res: Response, next: NextFunction) => {
   const headers: IncomingHttpHeaders = req.headers;

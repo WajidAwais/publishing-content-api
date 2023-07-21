@@ -8,4 +8,5 @@ export interface ResponseCodes {
   ok: number;
   serverError: number;
   authorizationError: number;
+  conflictError: number;
 }

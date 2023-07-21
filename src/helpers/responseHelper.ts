@@ -1,15 +1,14 @@
-import RESPONSE_CODES from '../constants/responseCodes';
 import { Response } from 'express';
+import RESPONSE_CODES from '../constants/responseCodes';
 
 const sendResponse = (res: Response, data?: any, error?: string | null, responseCode?: number | null) => {
   if (error) {
-    res.send({
+    res.status(responseCode || RESPONSE_CODES.serverError).json({
       payload: {},
       message: error,
-      response_code: responseCode || RESPONSE_CODES.serverError,
     });
   } else {
-    res.send({ payload: data || {}, response_code: RESPONSE_CODES.ok });
+    res.send({ payload: data || {} });
   }
 };
 

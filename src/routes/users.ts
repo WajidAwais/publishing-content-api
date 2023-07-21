@@ -1,11 +1,11 @@
 import express from 'express';
 
 import { handleLogin, handleSignup } from '../controllers/users';
-import tryCatchWrapper from '../helpers/tryCatchHelper';
+import exceptionHandler from '../helpers/exceptionHelper';
 
 const router = express.Router();
 
-router.post('/signup', tryCatchWrapper(handleSignup));
-router.post('/login', tryCatchWrapper(handleLogin));
+router.post('/signup', exceptionHandler(handleSignup));
+router.post('/login', exceptionHandler(handleLogin));
 
 export default router;
