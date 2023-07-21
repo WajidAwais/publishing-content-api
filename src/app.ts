@@ -4,8 +4,11 @@ import cors from 'cors';
 import 'dotenv/config';
 import routes from './routes/index';
 
+const options: cors.CorsOptions = {
+  origin: process.env.REACT_APP_URL
+};
 export const app = express();
-app.use(cors());
+app.use(cors(options));
 app.use(logger('dev'));
 
 app.use(express.json());
